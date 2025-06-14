@@ -1,46 +1,42 @@
-/* Base Reset */
+/* General Reset */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+/* Body & Fonts */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f8f9fa;
+  background-color: #f9f9f9;
   color: #333;
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Dark mode */
-body.dark {
-  background-color: #121212;
-  color: #e4e4e4;
+/* Container for consistent layout */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Container layout */
-section {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-}
-
-/* Header */
+/* Header Navigation */
 header {
-  background-color: #0077b6;
+  background-color: #2c3e50;
   color: white;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 1rem 0;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 nav h1 {
@@ -48,130 +44,98 @@ nav h1 {
 }
 
 nav ul {
-  display: flex;
-  gap: 1rem;
   list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Hero */
-#hero {
-  text-align: center;
-  padding: 3rem 1rem 2rem;
-  background: #e9f5ff;
-}
-
-body.dark #hero {
-  background: #1e1e1e;
-}
-
+/* Hero Section */
 #hero img {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  margin-bottom: 1.5rem;
-  margin-top: 1rem;
   object-fit: cover;
-  border: 3px solid #0077b6;
+  display: block;
+  margin: 0 auto 1rem;
 }
 
 .intro-text {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto 1.2rem;
   text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .experience {
-  color: #555;
   font-style: italic;
+  font-size: 0.95rem;
+  display: block;
+  margin-top: 0.25rem;
 }
 
+/* Button */
 .button {
   display: inline-block;
-  background-color: #0077b6;
-  color: white;
+  text-align: center;
   padding: 0.6rem 1.2rem;
-  border-radius: 6px;
+  margin-top: 1rem;
+  background-color: #3498db;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
+  border-radius: 8px;
   transition: background 0.3s ease;
 }
 
 .button:hover {
-  background-color: #005f8e;
+  background-color: #2980b9;
 }
 
 /* About Section */
 #about .about {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  text-align: justify;
+  text-align: center;
 }
 
-body.dark #about .about {
-  background-color: #1a1a1a;
+#about .about p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-align-last: center;
 }
 
 /* Projects */
 .project {
-  background-color: #f0f0f0;
-  padding: 1.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  text-align: justify;
-}
-
-body.dark .project {
-  background-color: #1a1a1a;
-}
-
-/* Section Headings */
-section h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #0077b6;
+  background-color: #f2f2f2;
 }
 
 /* Contact */
 #contact ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  text-align: center;
   padding: 0;
-  margin-top: 1rem;
+}
+
+#contact li {
+  margin-bottom: 0.5rem;
 }
 
 #contact a {
+  color: #2c3e50;
   text-decoration: none;
-  color: #0077b6;
-  font-weight: 600;
-}
-
-#contact a:hover {
-  text-decoration: underline;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 1.5rem 0;
-  font-size: 0.9rem;
-  background-color: #0077b6;
-  color: white;
+  padding: 1rem;
   margin-top: 2rem;
+  background-color: #2c3e50;
+  color: white;
 }
