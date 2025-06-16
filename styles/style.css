@@ -101,6 +101,7 @@ nav a {
 }
 
 #about .about p {
+  margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: justify;
   text-align-last: center;
@@ -115,6 +116,14 @@ nav a {
   background-color: #f2f2f2;
 }
 
+/* Resume */
+.resume {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+}
 /* Contact */
 #contact ul {
   list-style: none;
